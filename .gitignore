@@ -1,0 +1,12 @@
+# misc
+.DS_Store
+
+# dependencies
+/node_modules
+
+# local env files
+.env*.local
+.env
+
+# credentials
+env.json
