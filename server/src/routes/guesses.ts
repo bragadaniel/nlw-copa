@@ -70,11 +70,13 @@ export async function guessesRoutes(fastify: FastifyInstance) {
         });
       }
 
-      if (game.date < new Date()) {
-        return reply.status(400).send({
-          message: "You cannot send guesses after the game data.",
-        });
-      }
+      //TODO: rever essa condiçao de verificaçao de data
+
+      // if (game.date < new Date()) {
+      //   return reply.status(400).send({
+      //     message: "You cannot send guesses after the game data.",
+      //   });
+      // }
 
       await prisma.guess.create({
         data: {
